@@ -1,0 +1,55 @@
+// @use '_reset';
+// @use '_normalize';
+@import '_reset.scss';
+@import '_normalize.scss';
+@import '_fonts.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 82vw;
+    margin: 0 auto;
+}
+
+$text-001: #E6DAF5;
+
+.header {
+    padding-top: 50px;
+    position: fixed;
+    width: 100vw;
+    &__menu {
+        max-width: 52%;
+        display: flex;
+        justify-content: space-between;
+        li a {
+            font-family: 'Victor Mono';
+            font-weight: 400;
+            font-size: 24px;
+            color: $text-001;
+            text-decoration: none;
+            border: none;
+            background: none;
+            line-height: normal;
+            opacity: 35%;
+            &:hover {
+                opacity: 100%;
+            }
+        }
+    }
+}
+
+$base-003: #0C001E;
+
+.home-section {
+    background-color: $base-003;
+    &__container {
+        min-height: 100vh;
+    }
+}
