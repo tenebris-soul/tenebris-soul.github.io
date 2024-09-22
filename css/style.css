@@ -1,57 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -362,15 +308,71 @@ template {
   display: none;
 }
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 @font-face {
-  font-family: "Victor Mono";
-  src: url("../fonts/VictorMono.ttf") format("ttf");
+  font-family: "VictorMono";
+  src: url("../fonts/VictorMono.ttf") format("opentype");
   font-style: normal;
+  font-weight: 100 700;
 }
 @font-face {
-  font-family: "Victor Mono Italic";
-  src: url("../fonts/VictorMono-Italic.ttf") format("ttf");
-  font-style: normal;
+  font-family: "VictorMono";
+  src: url("../fonts/VictorMono-Italic.ttf") format("opentype");
+  font-style: italic;
+  font-weight: 100 700;
 }
 * {
   box-sizing: border-box;
@@ -386,34 +388,112 @@ html, body {
   margin: 0 auto;
 }
 
+body {
+  background-color: #1E0437;
+}
+
 .header {
-  padding-top: 50px;
   position: fixed;
-  width: 100vw;
+  padding: 30px 50px;
+  background-color: #19032E;
+  border-radius: 10px;
+  box-shadow: 6px 4px 4px 0 rgba(0, 0, 0, 0.25);
+  top: 30px;
+  left: 130px;
+  transition: all 0.3s ease-in-out;
+}
+.header__container {
+  position: relative;
+}
+.header_hidden {
+  transform: translateY(-91px);
+  opacity: 50%;
+}
+.header__chevron {
+  display: none;
+}
+.header__chevron_unhidden {
+  display: block;
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 150%);
+  transition: all 0.3s ease-in-out;
+  opacity: 55%;
+}
+.header__chevron_unhidden:hover {
+  opacity: 100%;
+}
+.header__chevron_opened {
+  transform-origin: center;
+  transform: translate(-50%, 150%) rotate(180deg);
 }
 .header__menu {
-  max-width: 52%;
+  width: -moz-fit-content;
+  width: fit-content;
   display: flex;
   justify-content: space-between;
+  gap: 75px;
 }
 .header__menu li a {
-  font-family: "Victor Mono";
+  font-family: "VictorMono";
   font-weight: 400;
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #E6DAF5;
   text-decoration: none;
   border: none;
   background: none;
   line-height: normal;
   opacity: 35%;
+  transition: all 0.3s ease-in-out;
 }
 .header__menu li a:hover {
   opacity: 100%;
 }
 
-.home-section {
-  background-color: #0C001E;
+.home {
+  background-image: url(../img/home-bg.png);
+  background-size: 270%;
+  background-position-x: 30%;
+  background-position-y: 50%;
+  margin-bottom: 2000px;
 }
-.home-section__container {
+.home__container {
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.home__title {
+  font-family: "VictorMono";
+  font-style: normal;
+  font-size: 6.25rem;
+  font-weight: 600;
+  line-height: 135%;
+  color: #B4A414;
+  margin-bottom: 75px;
+}
+.home__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.call-button {
+  all: unset;
+  cursor: pointer;
+  font-family: "VictorMono";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #4E1768;
+  background-color: #E6DAF5;
+  padding: 16px 43px;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+.call-button:hover {
+  color: #14001E;
+  background-color: #B4A414;
 }

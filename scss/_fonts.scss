@@ -1,10 +1,12 @@
 @font-face {
-    font-family: 'Victor Mono';
-    src: url('../fonts/VictorMono.ttf') format('ttf');
+    font-family: 'VictorMono';
+    src: url('../fonts/VictorMono.ttf') format('opentype');
     font-style: normal;
+    font-weight: 100 700;
 }
 @font-face {
-    font-family: 'Victor Mono Italic';
-    src: url('../fonts/VictorMono-Italic.ttf') format('ttf');
-    font-style: normal;
+    font-family: 'VictorMono';
+    src: url('../fonts/VictorMono-Italic.ttf') format('opentype');
+    font-style: italic;
+    font-weight: 100 700;
 }
