@@ -458,7 +458,7 @@ body {
   background-size: 270%;
   background-position-x: 30%;
   background-position-y: 50%;
-  margin-bottom: 2000px;
+  margin-bottom: 145px;
 }
 .home__container {
   min-height: 100vh;
@@ -473,6 +473,7 @@ body {
   line-height: 135%;
   color: #B4A414;
   margin-bottom: 75px;
+  text-shadow: 7px 4px 2px rgba(0, 0, 0, 0.45);
 }
 .home__wrapper {
   display: flex;
@@ -496,4 +497,105 @@ body {
 .call-button:hover {
   color: #14001E;
   background-color: #B4A414;
+}
+
+.decor-text {
+  font-family: "VictorMono";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  color: #634574;
+  margin-bottom: 20px;
+}
+
+.title-text {
+  font-family: "VictorMono";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  color: #B4A414;
+  margin-bottom: 70px;
+}
+
+.about-me {
+  margin-bottom: 100px;
+}
+.about-me__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 40px;
+}
+.about-me__photo {
+  width: 20vw;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 8px 8px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.about-me__text {
+  font-family: "VictorMono";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 24px;
+  line-height: 158%;
+  color: #E6DAF5;
+}
+.about-me__text span:nth-of-type(1) {
+  font-weight: 800;
+}
+.about-me__text span:nth-of-type(2) {
+  font-weight: 800;
+}
+.about-me__text span:nth-of-type(3) {
+  font-style: italic;
+}
+.about-me__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
+
+.my-skills {
+  margin-bottom: 100px;
+}
+.my-skills__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.my-skills__skill-svg {
+  margin-bottom: 10px;
+}
+.my-skills__skill-name {
+  font-family: "VictorMono";
+  font-weight: 300;
+  font-size: 24px;
+  text-align: center;
+  color: #E6DAF5;
+  line-height: 135%;
+}
+
+.my-projects {
+  margin-bottom: 130px;
+}
+
+.contact-me-block {
+  background-color: #14001E;
+  padding: 69px 0px;
+}
+.contact-me-block__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-me-block__text {
+  font-family: "VictorMono";
+  font-weight: 700;
+  font-size: 64px;
+  color: #B4A414;
+  margin-bottom: 40px;
+  text-align: center;
 }
