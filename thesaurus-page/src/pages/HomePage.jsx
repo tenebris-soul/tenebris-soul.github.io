@@ -52,7 +52,7 @@ function HomePage() {
           <span className="eyebrow">Unity 6 asset plugin</span>
           <h1>Создавайте виртуальные музеи в Unity 6 без кода</h1>
           <p>
-            Thesaurus — ассет-плагин для Unity 6, который помогает быстро собирать интерактивные музейные пространства,
+            Thesaurus - ассет-плагин для Unity 6, который помогает быстро собирать интерактивные музейные пространства,
             выставки и геймифицированные образовательные проекты.
           </p>
           <div className="hero-actions">
@@ -162,7 +162,6 @@ function HomePage() {
           <p>Скачайте Thesaurus, импортируйте его в Unity 6 и соберите первую интерактивную экспозицию без написания кода.</p>
         </div>
         <div className="download-actions">
-          {/* TODO: замените href на реальную ссылку скачивания плагина Thesaurus. */}
           <Button href="#">Скачать плагин</Button>
           <Button to="/docs" variant="secondary">Читать документацию</Button>
         </div>

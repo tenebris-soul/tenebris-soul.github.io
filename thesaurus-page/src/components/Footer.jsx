@@ -16,7 +16,7 @@ function Footer() {
       </div>
       <div className="footer-links">
         <Link to="/docs">Документация</Link>
-        <a href="/#download" onClick={goToDownload}>Скачивание</a>
+        <a href="#download" onClick={goToDownload}>Скачивание</a>
         <span>Unity 6</span>
         <span>Copyright 2026 Thesaurus</span>
       </div>

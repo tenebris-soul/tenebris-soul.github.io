@@ -1,6 +1,11 @@
 import { docsSections } from '../data/docsData.js';
 
 function DocsPage() {
+  const scrollToSection = (event, sectionId) => {
+    event.preventDefault();
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   return (
     <section className="docs-layout">
       <aside className="docs-sidebar">
@@ -8,7 +13,7 @@ function DocsPage() {
         <h1>Документация</h1>
         <nav aria-label="Разделы документации">
           {docsSections.map((section) => (
-            <a key={section.id} href={`#${section.id}`}>
+            <a key={section.id} href="#/docs" onClick={(event) => scrollToSection(event, section.id)}>
               {section.title}
             </a>
           ))}

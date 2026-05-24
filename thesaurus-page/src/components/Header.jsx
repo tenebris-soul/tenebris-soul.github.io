@@ -44,7 +44,7 @@ function Header() {
         </Link>
 
         <nav className="header-actions" aria-label="Основная навигация">
-          <a className="header-link header-download" href="/#download" onClick={handleDownloadClick}>
+          <a className="header-link header-download" href="#download" onClick={handleDownloadClick}>
             Скачать плагин
           </a>
           <NavLink className="header-link" to="/docs" onClick={handleDocsClick}>
