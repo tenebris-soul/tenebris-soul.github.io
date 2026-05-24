@@ -1,4 +1,5 @@
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { PLUGIN_DOWNLOAD_FILENAME, PLUGIN_DOWNLOAD_URL } from '../data/download.js';
 
 function Header() {
   const location = useLocation();
@@ -24,17 +25,6 @@ function Header() {
     }, 80);
   };
 
-  const handleDownloadClick = (event) => {
-    event.preventDefault();
-
-    if (location.pathname === '/') {
-      document.getElementById('download')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      return;
-    }
-
-    navigate('/?scroll=download');
-  };
-
   return (
     <header className="site-header">
       <div className="site-header-inner">
@@ -44,7 +34,7 @@ function Header() {
         </Link>
 
         <nav className="header-actions" aria-label="Основная навигация">
-          <a className="header-link header-download" href="#download" onClick={handleDownloadClick}>
+          <a className="header-link header-download" href={PLUGIN_DOWNLOAD_URL} download={PLUGIN_DOWNLOAD_FILENAME}>
             Скачать плагин
           </a>
           <NavLink className="header-link" to="/docs" onClick={handleDocsClick}>

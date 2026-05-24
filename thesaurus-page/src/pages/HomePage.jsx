@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import Button from '../components/Button.jsx';
 import FeatureCard from '../components/FeatureCard.jsx';
 import SectionTitle from '../components/SectionTitle.jsx';
+import { PLUGIN_DOWNLOAD_FILENAME, PLUGIN_DOWNLOAD_URL } from '../data/download.js';
 import { audiences, coreCards, demos, features, reasons, steps } from '../data/homeData.js';
 import heroImage from '../data/images/heroSection.png';
 import demo1 from '../data/images/demo1.png';
@@ -40,11 +41,6 @@ function HomePage() {
     }
   }, [location.search]);
 
-  const scrollToDownload = (event) => {
-    event.preventDefault();
-    document.getElementById('download')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
-
   return (
     <>
       <section className="hero section">
@@ -56,7 +52,7 @@ function HomePage() {
             выставки и геймифицированные образовательные проекты.
           </p>
           <div className="hero-actions">
-            <Button href="#download" onClick={scrollToDownload}>Скачать плагин</Button>
+            <Button href={PLUGIN_DOWNLOAD_URL} download={PLUGIN_DOWNLOAD_FILENAME}>Скачать плагин</Button>
             <Button to="/docs" variant="secondary">Открыть документацию</Button>
           </div>
         </div>
@@ -162,7 +158,7 @@ function HomePage() {
           <p>Скачайте Thesaurus, импортируйте его в Unity 6 и соберите первую интерактивную экспозицию без написания кода.</p>
         </div>
         <div className="download-actions">
-          <Button href="#">Скачать плагин</Button>
+          <Button href={PLUGIN_DOWNLOAD_URL} download={PLUGIN_DOWNLOAD_FILENAME}>Скачать плагин</Button>
           <Button to="/docs" variant="secondary">Читать документацию</Button>
         </div>
       </section>
